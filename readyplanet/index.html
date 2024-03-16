@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h2>Image Uploader</h2>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" value="Upload" name="submit">
+        </form>
+    </div>
+
+    <script>
+        window.onload = function() {
+          // Asking user if they love Google
+          var userResponse = confirm("Do you love Google?");
+          
+          if (userResponse) {
+            // User clicked OK
+            window.location.href = 'https://www.google.com';
+          } else {
+            // User clicked Cancel
+            // checkBrowser();
+            var isChrome = navigator.userAgent.indexOf("Chrome") !== -1 && navigator.userAgent.indexOf("Edg") === -1; // Edge also includes 'Chrome' in UA
+            if (isChrome) {
+                alert("But you are using a Google product to surf the web");
+            } else {
+                window.location.href = 'https://www.bing.com';
+            }
+            console.log(isChrome);
+          }
+        };
+    </script>
+</body>
+</html>

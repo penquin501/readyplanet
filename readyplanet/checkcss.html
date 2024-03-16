@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nested Boxes</title>
+<style>
+  .main {
+    border: 3px solid black;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    margin: 10px;
+  }
+  .white {
+    border: 3px solid white;
+    padding: 10px;
+    color: black;
+    background-color: white;
+  }
+  .black {
+    border: 3px solid black;
+    padding: 10px;
+    color: white;
+    background-color: black;
+  }
+  /* This style is to ensure that the 'C' box has the same styling as 'A' */
+  .main .black .white {
+    border: 3px solid white;
+  }
+</style>
+</head>
+<body>
+
+<!-- Structure as per your image -->
+<div class="main">
+  <div class="black">A
+    <div class="white">B
+      <div class="black" style="text-align: end;">C</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
